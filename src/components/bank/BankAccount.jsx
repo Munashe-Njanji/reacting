@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { v1 as uuidv1 } from "uuid";
 import './BankAccount.css';
 import Balance from './Balance';
 import TransactionInput from './TransactionInput';
@@ -29,7 +28,7 @@ function BankAccount() {
       return;
     }
     const newTransaction = {
-      id: uuidv1(),
+      id: transactions.length + 1,
       type,
       amount: numAmount,
       date: new Date().toLocaleString()
